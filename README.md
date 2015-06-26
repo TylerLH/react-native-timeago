@@ -14,7 +14,7 @@ var MyComponent = React.createClass({
 
   render() {
     return (
-      <TimeAgo time={time} />
+      <TimeAgo time={timestamp} />
     )
   }
 
