@@ -34,5 +34,4 @@ All normal Text props are applicable (including style). Use the `interval` prop 
 If you'd like to see something added or changed to this module please open a new GitHub issue. Pull requests are always welcome.
 
 ### Author
-
 Created and maintained by [Tyler Hughes](https://twitter.com/iampbt).
