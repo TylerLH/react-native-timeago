@@ -35,4 +35,4 @@ If you'd like to see something added or changed to this module please open a new
 
 ### Author
 
-Created and maintained by [https://twitter.com/iampbt](Tyler Hughes).
+Created and maintained by [Tyler Hughes](https://twitter.com/iampbt).
