@@ -10,10 +10,10 @@
     "react-native",
     "timeago"
   ],
-  "peerDependencies": [
+  "peerDependencies": {
     "moment": "2.x.x",
     "react-native": ">0.4.x"
-  ],
+  },
   "author": "Tyler Hughes <iampbt@gmail.com>",
   "repository": {
     "type": "git",
