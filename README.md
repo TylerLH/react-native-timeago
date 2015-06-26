@@ -5,6 +5,7 @@ An auto-updating timeago component for React Native using moment.js.
 ## Usage
 
 ```jsx
+var React = require('react-native');
 var TimeAgo = require('react-native-timeago');
 var timestamp = "2015-06-21T06:24:44.124Z"; // Any valid date string
 
