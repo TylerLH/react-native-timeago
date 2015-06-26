@@ -28,3 +28,11 @@ All normal Text props are applicable (including style). Use the `interval` prop 
 // This component would update every 20 seconds
 <TimeAgo time={timestamp} interval={20000} />
 ```
+
+## Contributing
+
+If you'd like to see something added or changed to this module please open a new GitHub issue. Pull requests are always welcome.
+
+### Author
+
+Created and maintained by [https://twitter.com/iampbt](Tyler Hughes).
