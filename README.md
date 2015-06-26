@@ -1,6 +1,6 @@
 # react-native-timeago
 
-An auto-updating timeago component for React Native using moment.js.
+An auto-updating timeago component for React Native using [moment.js](http://momentjs.com/).
 
 ## Usage
 
