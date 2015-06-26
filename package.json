@@ -8,11 +8,13 @@
   },
   "keywords": [
     "react-native",
-    "timeago"
+    "timeago",
+    "react-component",
+    "react-native-component"
   ],
   "peerDependencies": {
     "moment": "2.x.x",
-    "react-native": ">0.4.x"
+    "react-native": "^0.5.0"
   },
   "author": "Tyler Hughes <iampbt@gmail.com>",
   "repository": {
