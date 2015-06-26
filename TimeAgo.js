@@ -6,8 +6,20 @@ var moment = require('moment');
 
 var TimeAgo = React.createClass({
 
+  propTypes: {
+    time: React.propTypes.string.isRequired,
+    interval: React.propTypes.number
+  },
+
+  getDefaultProps() {
+    return {
+      interval: 60000
+    }
+  },
+
   componentDidMount() {
-    setInterval(this.update, 60000);
+    var {interval} = this.props;
+    setInterval(this.update, interval);
   },
 
   componentWillUnmount() {

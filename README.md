@@ -22,4 +22,9 @@ var MyComponent = React.createClass({
 });
 ```
 
-You can also pass any styles directly onto the component's props as you would with any other component.
+All normal Text props are applicable (including style). Use the `interval` prop to change the update interval in milliseconds (default: 60000).
+
+```jsx
+// This component would update every 20 seconds
+<TimeAgo time={timestamp} interval={20000} />
+```
