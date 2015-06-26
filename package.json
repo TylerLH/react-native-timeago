@@ -1,0 +1,23 @@
+{
+  "name": "react-native-timeago",
+  "version": "0.0.1",
+  "description": "Auto-updating timeago component for React Native",
+  "main": "TimeAgo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "timeago"
+  ],
+  "peerDependencies": [
+    "moment": "2.x.x",
+    "react-native": ">0.4.x"
+  ],
+  "author": "Tyler Hughes <iampbt@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TylerLH/react-native-timeago"
+  },
+  "license": "ISC"
+}
