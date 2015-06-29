@@ -1,6 +1,6 @@
 {
   "name": "react-native-timeago",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Auto-updating timeago component for React Native",
   "main": "TimeAgo.js",
   "scripts": {
