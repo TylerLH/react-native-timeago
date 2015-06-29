@@ -1,5 +1,6 @@
 var React = require('react-native');
 var {
+  PropTypes,
   Text
 } = React;
 var moment = require('moment');
@@ -7,8 +8,8 @@ var moment = require('moment');
 var TimeAgo = React.createClass({
 
   propTypes: {
-    time: React.propTypes.string.isRequired,
-    interval: React.propTypes.number
+    time: PropTypes.string.isRequired,
+    interval: PropTypes.number
   },
 
   getDefaultProps() {
