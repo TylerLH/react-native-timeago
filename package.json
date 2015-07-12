@@ -14,7 +14,7 @@
   ],
   "peerDependencies": {
     "moment": "2.x.x",
-    "react-native": "^0.5.0"
+    "react-native": "*"
   },
   "author": "Tyler Hughes <iampbt@gmail.com>",
   "repository": {
