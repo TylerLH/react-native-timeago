@@ -1,5 +1,7 @@
 # react-native-timeago
 
+[![View package on npm](https://img.shields.io/npm/v/react-native-timeago.svg?style=flat-square)](https://www.npmjs.com/package/react-native-timeago)
+
 An auto-updating timeago component for React Native using [moment.js](http://momentjs.com/).
 
 ## Usage
