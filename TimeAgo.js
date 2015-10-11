@@ -4,9 +4,10 @@ var {
   Text
 } = React;
 var moment = require('moment');
+var TimerMixin = require('react-timer-mixin');
 
 var TimeAgo = React.createClass({
-
+  mixins: [TimerMixin],
   propTypes: {
     time: PropTypes.string.isRequired,
     interval: PropTypes.number
@@ -20,11 +21,11 @@ var TimeAgo = React.createClass({
 
   componentDidMount() {
     var {interval} = this.props;
-    setInterval(this.update, interval);
+    this.setInterval(this.update, interval);
   },
 
   componentWillUnmount() {
-    clearInterval(this.update);
+    this.clearInterval(this.update);
   },
 
   // We're using this method because of a weird bug

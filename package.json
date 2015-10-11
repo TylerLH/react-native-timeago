@@ -14,6 +14,7 @@
   ],
   "peerDependencies": {
     "moment": "2.x.x",
+    "react-timer-mixin": "*",
     "react-native": "*"
   },
   "author": "Tyler Hughes <iampbt@gmail.com>",
