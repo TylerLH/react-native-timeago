@@ -11,12 +11,12 @@ var TimeAgo = React.createClass({
   propTypes: {
     time: PropTypes.string.isRequired,
     interval: PropTypes.number,
-    includeAgo: PropTypes.bool
+    hideAgo: PropTypes.bool
   },
 
   getDefaultProps() {
     return {
-      includeAgo: false,
+      hideAgo: false,
       interval: 60000
     }
   },
@@ -38,7 +38,7 @@ var TimeAgo = React.createClass({
 
   render() {
     return (
-      <Text {...this.props}>{moment(this.props.time).fromNow({this.props.includeAgo})}</Text>
+      <Text {...this.props}>{moment(this.props.time).fromNow(this.props.hideAgo)}</Text>
     );
   }
 });
