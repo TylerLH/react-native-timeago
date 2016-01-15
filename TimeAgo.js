@@ -10,11 +10,13 @@ var TimeAgo = React.createClass({
   mixins: [TimerMixin],
   propTypes: {
     time: PropTypes.string.isRequired,
-    interval: PropTypes.number
+    interval: PropTypes.number,
+    hideAgo: PropTypes.bool
   },
 
   getDefaultProps() {
     return {
+      hideAgo: false,
       interval: 60000
     }
   },
@@ -36,7 +38,7 @@ var TimeAgo = React.createClass({
 
   render() {
     return (
-      <Text {...this.props}>{moment(this.props.time).fromNow()}</Text>
+      <Text {...this.props}>{moment(this.props.time).fromNow(this.props.hideAgo)}</Text>
     );
   }
 });
