@@ -40,6 +40,19 @@ All normal Text props are applicable (including style). Use the `interval` prop 
 <TimeAgo time={timestamp} interval={20000} />
 ```
 
+##Support local language
+To support local language, you need to require locale language file, and call `moment.locale()` in your app. 
+For example
+```jsx
+var TimeAgo = require('react-native-timeago');
+
+var moment = require('moment'); //load moment module to set local language
+require('moment/locale/zh-cn'); //for import moment local language file during the application build
+moment.locale('zh-cn');//set moment local language to zh-cn
+...
+```
+
+
 ## Contributing
 
 If you'd like to see something added or changed to this module please open a new GitHub issue. Pull requests are always welcome.
