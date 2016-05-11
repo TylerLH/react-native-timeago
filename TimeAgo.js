@@ -9,7 +9,12 @@ var { Text } = ReactNative;
 var TimeAgo = React.createClass({
   mixins: [TimerMixin],
   propTypes: {
-    time: PropTypes.string.isRequired,
+    time: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.number,
+      React.PropTypes.array,
+      React.PropTypes.instanceOf(Date)
+    ]).isRequired,
     interval: PropTypes.number,
     hideAgo: PropTypes.bool
   },
