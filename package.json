@@ -1,6 +1,6 @@
 {
   "name": "react-native-timeago",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Auto-updating timeago component for React Native",
   "main": "TimeAgo.js",
   "scripts": {
@@ -15,7 +15,8 @@
   "peerDependencies": {
     "moment": "2.x.x",
     "react-timer-mixin": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react": ">=0.14.0"
   },
   "author": "Tyler Hughes <iampbt@gmail.com>",
   "repository": {

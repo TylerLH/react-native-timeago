@@ -1,15 +1,20 @@
-var React = require('react-native');
-var {
-  PropTypes,
-  Text
-} = React;
+var React = require('react')
+var ReactNative = require('react-native');
 var moment = require('moment');
 var TimerMixin = require('react-timer-mixin');
+
+var { PropTypes } = React;
+var { Text } = ReactNative;
 
 var TimeAgo = React.createClass({
   mixins: [TimerMixin],
   propTypes: {
-    time: PropTypes.string.isRequired,
+    time: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.number,
+      React.PropTypes.array,
+      React.PropTypes.instanceOf(Date)
+    ]).isRequired,
     interval: PropTypes.number,
     hideAgo: PropTypes.bool
   },
