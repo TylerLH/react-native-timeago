@@ -9,7 +9,12 @@ var TimerMixin = require('react-timer-mixin');
 var TimeAgo = React.createClass({
   mixins: [TimerMixin],
   propTypes: {
-    time: PropTypes.any.isRequired,
+    time: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.number,
+      React.PropTypes.array,
+      React.PropTypes.instanceOf(Date)
+    ]).isRequired,
     interval: PropTypes.number,
     hideAgo: PropTypes.bool
   },
