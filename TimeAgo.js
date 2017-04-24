@@ -43,7 +43,7 @@ var TimeAgo = React.createClass({
 
   render() {
     return (
-      <Text {...this.props}>{moment(this.props.time).fromNow(this.props.hideAgo)}</Text>
+      <Text {...this.props}>{moment(new Date(this.props.time)).fromNow(this.props.hideAgo)}</Text>
     );
   }
 });
