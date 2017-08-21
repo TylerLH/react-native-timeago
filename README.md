@@ -7,14 +7,15 @@ An auto-updating timeago component for React Native using [moment.js](http://mom
 ## Usage
 
 ```jsx
-var React = require('react-native');
-var TimeAgo = require('react-native-timeago');
+import { Component } from 'react';
+import TimeAgo from 'react-native-timeago';
 
 // Timestamp can be any valid data type accepted in a Moment.js constructor
 // Currently accepts string, number, array, or a Date instance
 var timestamp = "2015-06-21T06:24:44.124Z";
 
-var MyComponent = React.createClass({
+class MyComponent extends Component {
+
   ...
 
   render() {
@@ -24,7 +25,7 @@ var MyComponent = React.createClass({
   }
 
   ...
-});
+};
 ```
 
 If you'd like to hide the string "ago" from the phrase returned, you can use the hideAgo prop:
