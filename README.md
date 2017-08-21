@@ -12,7 +12,7 @@ import TimeAgo from 'react-native-timeago';
 
 // Timestamp can be any valid data type accepted in a Moment.js constructor
 // Currently accepts string, number, array, or a Date instance
-var timestamp = "2015-06-21T06:24:44.124Z";
+let timestamp = "2015-06-21T06:24:44.124Z";
 
 class MyComponent extends Component {
 
@@ -48,9 +48,9 @@ All normal Text props are applicable (including style). Use the `interval` prop 
 To support local language, you need to require locale language file, and call `moment.locale()` in your app.
 For example
 ```jsx
-var TimeAgo = require('react-native-timeago');
+let TimeAgo = require('react-native-timeago');
 
-var moment = require('moment'); //load moment module to set local language
+let moment = require('moment'); //load moment module to set local language
 require('moment/locale/zh-cn'); //for import moment local language file during the application build
 moment.locale('zh-cn');//set moment local language to zh-cn
 ...
