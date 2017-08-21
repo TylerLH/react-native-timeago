@@ -7,7 +7,7 @@ An auto-updating timeago component for React Native using [moment.js](http://mom
 ## Usage
 
 ```jsx
-import { Component } from 'react';
+import React, { Component } from 'react';
 import TimeAgo from 'react-native-timeago';
 
 // Timestamp can be any valid data type accepted in a Moment.js constructor
