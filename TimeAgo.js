@@ -15,6 +15,12 @@ var TimeAgo = React.createClass({
       React.PropTypes.array,
       React.PropTypes.instanceOf(Date)
     ]).isRequired,
+    timeFrom: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.number,
+      React.PropTypes.array,
+      React.PropTypes.instanceOf(Date)
+    ]),
     interval: PropTypes.number,
     hideAgo: PropTypes.bool
   },
@@ -42,9 +48,15 @@ var TimeAgo = React.createClass({
   },
 
   render() {
-    return (
-      <Text {...this.props}>{moment(this.props.time).fromNow(this.props.hideAgo)}</Text>
-    );
+    if (this.props.timeFrom) {
+      return (
+        <Text {...this.props}>{moment(this.props.time).from(this.props.timeFrom, this.props.hideAgo)}</Text>
+      );
+    } else {
+      return (
+        <Text {...this.props}>{moment(this.props.time).fromNow(this.props.hideAgo)}</Text>
+      );
+    }
   }
 });
 
