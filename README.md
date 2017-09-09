@@ -7,14 +7,15 @@ An auto-updating timeago component for React Native using [moment.js](http://mom
 ## Usage
 
 ```jsx
-var React = require('react-native');
-var TimeAgo = require('react-native-timeago');
+import React, { Component } from 'react';
+import TimeAgo from 'react-native-timeago';
 
 // Timestamp can be any valid data type accepted in a Moment.js constructor
 // Currently accepts string, number, array, or a Date instance
-var timestamp = "2015-06-21T06:24:44.124Z";
+let timestamp = "2015-06-21T06:24:44.124Z";
 
-var MyComponent = React.createClass({
+class MyComponent extends Component {
+
   ...
 
   render() {
@@ -24,7 +25,7 @@ var MyComponent = React.createClass({
   }
 
   ...
-});
+};
 ```
 
 If you'd like to hide the string "ago" from the phrase returned, you can use the hideAgo prop:
@@ -47,9 +48,9 @@ All normal Text props are applicable (including style). Use the `interval` prop 
 To support local language, you need to require locale language file, and call `moment.locale()` in your app.
 For example
 ```jsx
-var TimeAgo = require('react-native-timeago');
+let TimeAgo = require('react-native-timeago');
 
-var moment = require('moment'); //load moment module to set local language
+let moment = require('moment'); //load moment module to set local language
 require('moment/locale/zh-cn'); //for import moment local language file during the application build
 moment.locale('zh-cn');//set moment local language to zh-cn
 ...
