@@ -44,7 +44,7 @@ All normal Text props are applicable (including style). Use the `interval` prop 
 <TimeAgo time={timestamp} interval={20000} />
 ```
 
-##Support local language
+## Support local language
 To support local language, you need to require locale language file, and call `moment.locale()` in your app.
 For example
 ```jsx
