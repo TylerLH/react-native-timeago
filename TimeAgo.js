@@ -1,51 +1,58 @@
-var React = require('react')
-var ReactNative = require('react-native');
-var moment = require('moment');
-var TimerMixin = require('react-timer-mixin');
+import React, { Component } from 'react';
+import { Text } from 'react-native';
+import moment from 'moment';
+import PropTypes from 'prop-types';
 
-var { PropTypes } = React;
-var { Text } = ReactNative;
-
-var TimeAgo = React.createClass({
-  mixins: [TimerMixin],
-  propTypes: {
-    time: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number,
-      React.PropTypes.array,
-      React.PropTypes.instanceOf(Date)
-    ]).isRequired,
-    interval: PropTypes.number,
-    hideAgo: PropTypes.bool
-  },
-
-  getDefaultProps() {
-    return {
-      hideAgo: false,
-      interval: 60000
-    }
-  },
+class TimeAgo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      key: Math.random(),
+    };
+  }
 
   componentDidMount() {
-    var {interval} = this.props;
-    this.setInterval(this.update, interval);
-  },
+    const { interval } = this.props;
+    this.timer = setTimeout(() => {
+      this.update();
+    }, interval);
+  }
 
   componentWillUnmount() {
-    this.clearInterval(this.update);
-  },
+    clearTimeout(this.timer);
+  }
 
-  // We're using this method because of a weird bug
-  // where autobinding doesn't seem to work w/ straight this.forceUpdate
   update() {
-    this.forceUpdate();
-  },
+    const { interval } = this.props;
+    this.timer = setTimeout(() => {
+      this.setState({
+        key: Math.random()
+      });
+      this.update();
+    }, interval);
+  }
 
   render() {
     return (
-      <Text {...this.props}>{moment(this.props.time).fromNow(this.props.hideAgo)}</Text>
+      <Text key={this.state.key} {...this.props}>{moment(this.props.time).fromNow(this.props.hideAgo)}</Text>
     );
   }
-});
+}
 
-module.exports = TimeAgo;
+TimeAgo.propTypes = {
+  time: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.array,
+    PropTypes.instanceOf(Date)
+  ]).isRequired,
+  interval: PropTypes.number,
+  hideAgo: PropTypes.bool,
+}
+
+TimeAgo.defaultProps = {
+  hideAgo: false,
+  interval: 60000,
+}
+
+export default TimeAgo;
