@@ -63,6 +63,7 @@ If you'd like to see something added or changed to this module please open a new
 
 ## Author
 Created and maintained by [Tyler Hughes](https://twitter.com/iampbt).
+Contributions by [these fine folks](https://github.com/TylerLH/react-native-timeago/graphs/contributors).
 
 ## License
 Copyright (c) 2015-2017, Tyler Hughes <iampbt@gmail.com>
