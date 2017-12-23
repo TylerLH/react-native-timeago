@@ -32,9 +32,7 @@ If you'd like to hide the string "ago" from the phrase returned, you can use the
 
 
 ```
-...
 <TimeAgo time={timestamp} hideAgo={true} />
-...
 ```
 
 All normal Text props are applicable (including style). Use the `interval` prop to change the update interval in milliseconds (default: 60000).
