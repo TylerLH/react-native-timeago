@@ -31,7 +31,7 @@ class MyComponent extends Component {
 If you'd like to hide the string "ago" from the phrase returned, you can use the hideAgo prop:
 
 
-```
+```jsx
 <TimeAgo time={timestamp} hideAgo={true} />
 ```
 
