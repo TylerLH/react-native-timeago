@@ -38,10 +38,12 @@ export default class TimeAgo extends Component {
   };
 
   render() {
-    const { time, hideAgo } = this.props;
+    const { time, hideAgo, timeFormat } = this.props;
     return (
       <Text {...this.props}>
-        {moment(time).fromNow(hideAgo)}
+        {
+        timeFormat ? timeFormat(time) : moment(time).fromNow(hideAgo)
+        }
       </Text>
     );
   }
