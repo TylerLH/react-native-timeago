@@ -34,6 +34,7 @@ export default class TimeAgo extends Component {
 
   update = () => {
     this.forceUpdate();
+    clearTimeout(this.state.timer);
     this.createTimer();
   };
 
