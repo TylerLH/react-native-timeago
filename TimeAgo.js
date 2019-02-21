@@ -22,20 +22,18 @@ export default class TimeAgo extends Component {
 
   createTimer = () => {
     this.setState({
-      timer: setTimeout(() => {
+      timer: setInterval(() => {
         this.update();
       }, this.props.interval)
     });
   };
 
   componentWillUnmount() {
-    clearTimeout(this.state.timer);
+    clearInterval(this.state.timer);
   }
 
   update = () => {
     this.forceUpdate();
-    clearTimeout(this.state.timer);
-    this.createTimer();
   };
 
   render() {
