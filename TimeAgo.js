@@ -6,6 +6,7 @@ import moment from "moment";
 export default class TimeAgo extends Component {
   props: {
     time: string,
+    timeFrom?: string,
     interval?: number,
     hideAgo?: boolean
   };
@@ -38,9 +39,16 @@ export default class TimeAgo extends Component {
   };
 
   render() {
-    const { time, hideAgo } = this.props;
+    const { time, timeFrom, hideAgo, ...restProps } = this.props;
+    if (timeFrom) {
+      return (
+        <Text {...restProps}>
+          {moment(time).from(timeFrom, hideAgo)}
+        </Text>
+      )
+    }
     return (
-      <Text {...this.props}>
+      <Text {...restProps}>
         {moment(time).fromNow(hideAgo)}
       </Text>
     );

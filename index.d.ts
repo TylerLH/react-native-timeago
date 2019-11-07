@@ -2,6 +2,7 @@ import * as React from 'react';
 
 export interface Props {
     time: string | number | Array<any> | Date;
+    timeFrom?: string | number | Array<any> | Date;
     interval?: number;
     hideAgo?: boolean;
 }
