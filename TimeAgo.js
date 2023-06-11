@@ -1,13 +1,14 @@
 // @flow
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View, Text, TextStyle} from "react-native";
 import moment from "moment";
 
 export default class TimeAgo extends Component {
   props: {
     time: string,
     interval?: number,
-    hideAgo?: boolean
+    hideAgo?: boolean,
+    textStyle?: TextStyle,
   };
   state: { timer: null | number } = { timer: null };
 
@@ -38,9 +39,9 @@ export default class TimeAgo extends Component {
   };
 
   render() {
-    const { time, hideAgo } = this.props;
+    const { time, hideAgo, textStyle } = this.props; // added textstyle prop
     return (
-      <Text {...this.props}>
+      <Text style = {textStyle} {...this.props}>
         {moment(time).fromNow(hideAgo)}
       </Text>
     );
